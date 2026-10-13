@@ -13,11 +13,16 @@
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
-  <div class="topline">Uma casa de sabor, carinho e escolhas naturais. <span>Araras · SP</span></div>
   <header class="header"><div class="header-inner">
     <a class="brand" href="#" aria-label="Casa da Vovó Natural, início"><img src="assets/logo.jpg" alt="Logotipo original da Casa da Vovó" width="62" height="62"><span>Casa da Vovó<small>EMPÓRIO & CULINÁRIA SAUDÁVEL</small></span></a>
     <nav aria-label="Navegação principal"><a href="#produtos">Nossos produtos</a><a href="#essencia">Nossa essência</a><a href="#visite">Visite a casa</a></nav>
-    <button class="bag-button" data-open-order><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z M8 7V5a4 4 0 0 1 8 0v2"/></svg><span>Minha encomenda</span><b id="cart-count">0</b></button>
+    <div class="header-actions">
+      <div class="header-social" aria-label="Redes sociais da Casa da Vovó">
+        <a class="social-icon" href="https://www.instagram.com/casadavovonatural/" target="_blank" rel="noopener" aria-label="Instagram da Casa da Vovó"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none"/></svg></a>
+        <a class="social-icon" href="https://wa.me/5519993409426" target="_blank" rel="noopener" aria-label="WhatsApp da Casa da Vovó"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a9 9 0 0 1-13.8 7.6L3 21l1.8-4.3A9 9 0 1 1 21 11.5Z"/><path d="M8 7c-1 3 3 7 6 7l1-2-2-1-1 1-2-2 1-1-1-2Z"/></svg></a>
+      </div>
+      <button class="bag-button" data-open-order><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7h14l1 14H4L5 7Z M8 7V5a4 4 0 0 1 8 0v2"/></svg><span>Minha encomenda</span><b id="cart-count">0</b></button>
+    </div>
   </div></header>
   <main id="conteudo">
     <section class="hero wrap">
@@ -27,15 +32,35 @@
         <a class="button primary" href="#produtos">Escolha seus favoritos <span aria-hidden="true">↗</span></a>
         <div class="hero-proof"><span class="stars" aria-label="4,9 de 5 estrelas">★★★★★</span><span><strong>4,9 no Google</strong><small>O carinho também está nas avaliações.</small></span><a href="https://share.google/hocMxuFk72uplGqru" target="_blank" rel="noopener" aria-label="Ver avaliações no Google">↗</a></div>
       </div>
-      <div class="hero-visual"><div class="photo-frame"><img src="assets/paes.jpg" alt="Pão da Casa da Vovó com frutas, fatiado sobre uma tábua" width="640" height="640" fetchpriority="high"><div class="photo-caption"><span>DA NOSSA CASA PARA A SUA</span><i>Uma pausa com gosto de carinho.</i></div></div><div class="round-seal"><span>CARINHO EM</span><b>cada<br>escolha</b><span>CASA DA VOVÓ</span></div></div>
+      <div class="hero-visual">
+        <div class="photo-frame hero-carousel" id="hero-carousel" role="region" aria-roledescription="carrossel" aria-label="Fotos da Casa da Vovó" data-active-slide="0">
+          <div class="carousel-slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 4" aria-hidden="false"><img src="assets/paes.jpg" alt="Pão da Casa da Vovó com frutas, fatiado sobre uma tábua" width="640" height="640" fetchpriority="high"></div>
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="2 de 4" aria-hidden="true"><img src="assets/doce.jpg" alt="Doce da Casa da Vovó com morangos" width="480" height="640"></div>
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="3 de 4" aria-hidden="true"><img src="assets/bolo.jpg" alt="Bolo de coco com abacaxi da Casa da Vovó" width="480" height="640"></div>
+          <div class="carousel-slide" role="group" aria-roledescription="slide" aria-label="4 de 4" aria-hidden="true"><img src="assets/carinho.jpg" alt="Biscoitos decorados e embalados pela Casa da Vovó" width="480" height="640"></div>
+          <div class="photo-caption"><span>DA NOSSA CASA PARA A SUA</span><i>Uma pausa com gosto de carinho.</i></div>
+          <button class="carousel-arrow carousel-previous" type="button" aria-label="Foto anterior"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 6-6 6 6 6"/></svg></button>
+          <button class="carousel-arrow carousel-next" type="button" aria-label="Próxima foto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 6 6 6-6 6"/></svg></button>
+          <div class="carousel-controls">
+            <div class="carousel-indicators" role="group" aria-label="Escolher foto">
+              <button type="button" data-slide="0" aria-label="Ver foto 1: Pães da Vovó" aria-current="true"><span></span></button>
+              <button type="button" data-slide="1" aria-label="Ver foto 2: Doces com morango" aria-current="false"><span></span></button>
+              <button type="button" data-slide="2" aria-label="Ver foto 3: Bolo de coco com abacaxi" aria-current="false"><span></span></button>
+              <button type="button" data-slide="3" aria-label="Ver foto 4: Biscoitos decorados" aria-current="false"><span></span></button>
+            </div>
+            <button class="carousel-playback" type="button" aria-label="Pausar carrossel" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
+          </div>
+          <p class="sr-only carousel-status" aria-live="polite" aria-atomic="true"></p>
+        </div>
+        <div class="round-seal"><span>CARINHO EM</span><b>cada<br>escolha</b><span>CASA DA VOVÓ</span></div>
+      </div>
     </section>
-    <div class="benefit-strip"><div class="wrap"><span>❧ <b>Empório natural</b></span><span>♡ <b>Culinária com carinho</b></span><span>◌ <b>Opções sem açúcar e sem glúten</b></span><span>↗ <b>Encomende pelo WhatsApp</b></span></div></div>
     <section class="catalog wrap" id="produtos">
-      <div class="section-heading"><div><p class="eyebrow">ENCONTRE SEU NOVO FAVORITO</p><h2>Da Vovó, <em>para você.</em></h2></div><p>Para o café da manhã, a pausa da tarde<br>ou um momento que merece carinho.</p></div>
+      <div class="section-heading"><div><p class="eyebrow">ENCONTRE SEU NOVO FAVORITO</p><h2>Da Vovó, <em>para você.</em></h2></div><p>Para o café da manhã, a pausa da tarde<br> ou um momento que merece carinho.</p></div>
       <div class="catalog-tools"><div class="filters" role="group" aria-label="Filtrar produtos"><button class="active" data-filter="todos" aria-pressed="true">Todos</button><button data-filter="paes" aria-pressed="false">Pães</button><button data-filter="doces" aria-pressed="false">Bolos & doces</button><button data-filter="biscoitos" aria-pressed="false">Biscoitos</button></div><span class="catalog-note">Sabores e valores sob consulta</span></div>
       <div class="product-grid" id="product-grid"></div>
       <p class="product-disclaimer">As fotos são da nossa marca. Consulte tamanhos, ingredientes e disponibilidade de cada opção com a equipe.</p>
-      <div class="emporium"><div class="emporium-symbol" aria-hidden="true">❧</div><div><p class="eyebrow">TAMBÉM NO NOSSO EMPÓRIO</p><h3>Pequenas escolhas. Muitas possibilidades.</h3><p>Castanhas, sementes, cereais, chás e temperos a granel.<br>Conte para a gente o que você procura.</p></div><a class="text-link" data-whatsapp="Olá! Gostaria de consultar os produtos a granel da Casa da Vovó." href="https://wa.me/5519993409426" target="_blank" rel="noopener">Consultar o empório <span>↗</span></a></div>
+      <div class="emporium"><div class="emporium-symbol" aria-hidden="true">❧</div><div><p class="eyebrow">TAMBÉM NO NOSSO EMPÓRIO</p><h3>Pequenas escolhas. Muitas possibilidades.</h3><p>Castanhas, sementes, cereais, chás e temperos a granel.<br> Conte para a gente o que você procura.</p></div><a class="text-link" data-whatsapp="Olá! Gostaria de consultar os produtos a granel da Casa da Vovó." href="https://wa.me/5519993409426" target="_blank" rel="noopener">Consultar o empório <span>↗</span></a></div>
     </section>
     <section class="essence" id="essencia"><div class="wrap essence-inner"><div class="essence-art"><img src="assets/carinho.jpg" alt="Biscoitos decorados e embalados pela Casa da Vovó" width="640" height="640" loading="lazy"><span>O carinho mora nos detalhes.</span></div><div class="essence-copy"><p class="eyebrow">MUITO MAIS QUE UM EMPÓRIO</p><h2>Tem gosto de casa.<br>Tem cuidado <em>em cada detalhe.</em></h2><p>A Casa da Vovó reúne empório e culinária saudável em Araras. Um lugar para descobrir sabores, encontrar opções para a sua rotina e conversar sobre o que combina com você.</p><p>De um pão para o café a um presente cheio de carinho, cada escolha é um convite para trazer esse aconchego para a sua mesa.</p><a class="text-link" href="https://www.instagram.com/casadavovonatural/" target="_blank" rel="noopener">Conheça nosso dia a dia no Instagram <span>↗</span></a></div></div></section>
     <section class="how wrap" id="encomendar"><p class="eyebrow">SIMPLES, DO JEITINHO QUE DEVE SER</p><h2>Sua próxima encomenda,<br><em>a poucos passos.</em></h2><div class="steps"><article><span>01</span><h3>Escolha com calma</h3><p>Explore os produtos e adicione seus favoritos à lista de encomenda.</p></article><article><span>02</span><h3>Conte seus detalhes</h3><p>Informe a quantidade, a data desejada e suas preferências.</p></article><article><span>03</span><h3>Converse com a Vovó</h3><p>Envie sua lista pelo WhatsApp. Nossa equipe confirma opções, valores e retirada ou entrega.</p></article></div><button class="button primary" data-open-order>Montar minha encomenda <span>↗</span></button></section>

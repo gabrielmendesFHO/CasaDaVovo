@@ -1,4 +1,6 @@
 import {changeQuantity,restoreCart,buildMessage,whatsappUrl} from './order.mjs';
+import {initializeCarousel} from './carousel.mjs';
+initializeCarousel(document.querySelector('#hero-carousel'));
 const products=[
  {id:'paes',name:'Pães da Vovó',category:'paes',image:'paes.jpg',tag:'PARA O SEU CAFÉ',description:'Conheça os sabores e escolha o pão que combina com a sua rotina.'},
  {id:'coco',name:'Bolo de coco com abacaxi',category:'doces',image:'bolo.jpg',tag:'UM CARINHO EM FORMA DE BOLO',description:'Coco e abacaxi em uma combinação para deixar sua pausa mais gostosa.'},
